@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Pantallas Netflix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Pantallas Netflix</h1>
+        <div class="form-group">
+            <label for="pantalla">Nombre de la Pantalla:</label>
+            <input type="text" id="pantalla" placeholder="Ingrese el nombre de la pantalla">
+        </div>
+        <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha">
+        </div>
+        <div class="form-group">
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora">
+        </div>
+        <div class="form-group">
+            <label for="agente">Agente que la Vendió:</label>
+            <input type="text" id="agente" placeholder="Ingrese el nombre del agente">
+        </div>
+        <div class="form-group">
+            <label for="estatus">Estatus:</label>
+            <select id="estatus">
+                <option value="disponible">Disponible</option>
+                <option value="vendida">Vendida</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button onclick="agregarPantalla()">Agregar Pantalla</button>
+        </div>
+        <div class="filter-group">
+            <label for="filtrarFecha">Filtrar por Fecha:</label>
+            <input type="date" id="filtrarFecha" onchange="filtrarPantallas()">
+        </div>
+        <table class="pantallas-table">
+            <thead>
+                <tr>
+                    <th>Nombre de la Pantalla</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Agente que la Vendió</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody id="pantallas-body">
+                <!-- Las pantallas se agregarán aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
